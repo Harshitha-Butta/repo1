@@ -16,7 +16,7 @@ repo = Repo('C:\\git practice\\Connecting_to_remote_repo\\Autoupdate_versions')
 origin = repo.remote(name="origin")
 origin.pull()
 repo_heads=repo.heads
-repo_heads['cfc-hb'].checkout()
+repo_heads['hb1'].checkout()
 #version=input()
 
 version = '21.9.0.47'
@@ -37,4 +37,4 @@ add_version(data)
 repo.index.add('.')
 repo.index.commit('commit message from python script')
 origin = repo.remote(name="origin")
-origin.push('cfc-hb:main')
+origin.push('hb1:main')
