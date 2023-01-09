@@ -4,7 +4,7 @@ from git import Repo
 import os
 
 g = git.cmd.Git('https:\\github.com\\Harshitha-Butta\\Autoupdate_versions')
-
+g.pull()
 
 
 
@@ -13,8 +13,10 @@ def add_version(data, filename='versions_hyd_host2.json'):
         json.dump(data, f,indent=4)
         
 repo = Repo('C:\\git practice\\Connecting_to_remote_repo\\Autoupdate_versions')
-origin = repo.remote(name="origin")
-origin.pull()
+'''origin = repo.remote(name="origin")
+origin.pull()'''
+repo.remotes.origin.pull()
+
 repo_heads=repo.heads
 repo_heads['hb1'].checkout()
 #version=input()
