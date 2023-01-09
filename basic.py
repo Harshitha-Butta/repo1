@@ -12,7 +12,7 @@ def add_version(data, filename='versions_hyd_host2.json'):
     with open(filename,'w') as f:
         json.dump(data, f,indent=4)
         
-repo = Repo('C:\git practice\repo1')
+repo = Repo('C:\\git practice\\repo1')
 """origin = repo.remote(name="origin")
 origin.pull()"""
 repo.remotes.origin.pull()
